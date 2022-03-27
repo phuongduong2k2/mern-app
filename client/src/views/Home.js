@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import CreatePost from '../components/posts/CreatePost/CreatePost'
 import SinglePost from '../components/posts/SinglePost'
 import { Skeleton } from 'antd';
+import { apiUrl } from '../store/actions/constants';
 
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
 
   const handlePosts = async () => {   
     try {
-      const response = await axios.get('http://localhost:5000/api/posts/all')
+      const response = await axios.get(`${apiUrl}/posts/all`)
       const posts = response.data.posts
       setPosts(posts.reverse())
       setIsLoading(false)

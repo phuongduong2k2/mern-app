@@ -4,7 +4,7 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT,
-} from "./types";
+} from "./constants";
 
 import AuthService from "../../services/auth.service";
 

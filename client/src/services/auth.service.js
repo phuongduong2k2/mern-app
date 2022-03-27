@@ -1,10 +1,10 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-const API_URL = "http://localhost:5000/api/auth";
+import { apiUrl } from "../store/actions/constants";
 
 const loadUser = async () => {
-    const response = await axios.get(API_URL, { headers: authHeader() })
+    const response = await axios.get(`${apiUrl}/auth`, { headers: authHeader() })
     localStorage.setItem('username', response.data.user.username)
     localStorage.setItem('id', response.data.user._id)
     localStorage.setItem('createdAt', response.data.user.createdAt)
@@ -13,7 +13,7 @@ const loadUser = async () => {
 }
 
 const login = async (userForm) => {
-    const response = await axios.post(API_URL + '/login', userForm);
+    const response = await axios.post(`${apiUrl}/auth` + '/login', userForm);
     if (response.data.accessToken) {
         localStorage.setItem("accessToken", response.data.accessToken);
     }
@@ -21,7 +21,7 @@ const login = async (userForm) => {
 }
 
 const register = async (userForm) => {
-    const response = await axios.post(API_URL + '/register', userForm);
+    const response = await axios.post(`${apiUrl}/auth` + '/register', userForm);
     return response.data
 }
 

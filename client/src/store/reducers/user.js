@@ -1,7 +1,7 @@
 import {
     REMOVE_USER,
     SET_USER
-} from "../actions/types";
+} from "../actions/constants";
 
 const id = localStorage.getItem('id')
 

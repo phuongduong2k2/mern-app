@@ -6,6 +6,7 @@ import ModalCustom from './ModalCustom'
 import axios from 'axios'
 import SinglePost from '../../components/posts/SinglePost'
 import { UserOutlined } from '@ant-design/icons'
+import { apiUrl } from '../../store/actions/constants'
 
 
 const Profile = () => {
@@ -41,7 +42,7 @@ const Profile = () => {
 
   const handlePosts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/posts', { headers: authHeader() })
+      const response = await axios.get(`${apiUrl}/posts`, { headers: authHeader() })
       const posts = response.data.posts;
       setPosts(posts.reverse())
       setIsLoading(false)

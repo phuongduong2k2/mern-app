@@ -4,6 +4,7 @@ import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import authHeader from '../../services/auth-header';
 import axios from 'axios';
 import Notify from '../../untils/Notify/Notify'
+import { apiUrl } from '../../store/actions/constants';
 
 function getBase64(img, callback) {
   const reader = new FileReader();
@@ -55,7 +56,7 @@ class ModalCustom extends React.Component {
     
     const uploadProfilePicture = async () => {
       try {
-        const response = await axios.put(`http://localhost:5000/api/auth/profile/${localStorage.getItem('id')}`, 
+        const response = await axios.put(`${apiUrl}/auth/profile/${localStorage.getItem('id')}`, 
             { image: `${imageUrl}`,
               userId: this.props.userId
             },
@@ -82,7 +83,7 @@ class ModalCustom extends React.Component {
 
     const updatePost = async () => {
       try {
-        const response = await axios.put(`http://localhost:5000/api/posts/${this.props.id}`,
+        const response = await axios.put(`${apiUrl}/posts/${this.props.id}`,
             { 
               title: title,
               description: description
@@ -156,7 +157,7 @@ class ModalCustom extends React.Component {
                 listType="picture-card"
                 className="avatar-uploader"
                 showUploadList={false}
-                action={`http://localhost:5000/api/auth/profile`}
+                action={`${apiUrl}/auth/profile`}
                 beforeUpload={beforeUpload}
                 onChange={this.handleChange}
             >

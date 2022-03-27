@@ -3,6 +3,7 @@ import { Modal, Button, Input } from 'antd'
 import axios from 'axios'
 import authHeader from '../../../services/auth-header'
 import Notify from '../../../untils/Notify/Notify'
+import { apiUrl } from '../../../store/actions/constants'
 
 const ModalCustom = ({visible, onClose, user}) => {
     const [post, setPost] = useState({
@@ -13,7 +14,7 @@ const ModalCustom = ({visible, onClose, user}) => {
     const handleOk = async () => {
         try {
             const response = await axios.post(
-                'http://localhost:5000/api/posts', 
+                `${apiUrl}/posts`, 
                 { 
                     title: post.title,
                     description: post.description,

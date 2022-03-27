@@ -5,7 +5,7 @@ import { Button, Dropdown, Menu, Modal } from 'antd'
 import axios from 'axios';
 import authHeader from '../../services/auth-header';
 import Notify from '../../untils/Notify/Notify';
-import { useSelector } from 'react-redux';
+import { apiUrl } from '../../store/actions/constants';
 
 const SinglePost = ({post : {title, description, createdAt, username, image}, id, handleDeletePost, index, handleOpenModal}) => {
 
@@ -40,7 +40,7 @@ const SinglePost = ({post : {title, description, createdAt, username, image}, id
   const handleDelete = async () => {
     try {
       
-      const response = await axios.delete(`http://localhost:5000/api/posts/${id}`, { headers: authHeader() })
+      const response = await axios.delete(`${apiUrl}/posts/${id}`, { headers: authHeader() })
       handleDeletePost(index)
       Notify.success("", "Delete post success", {timeOut: 1000})
       console.log(response);

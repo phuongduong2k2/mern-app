@@ -94,7 +94,6 @@ const ModalCustom = ({visible, onClose, user}) => {
                 <div>
                     <Input.TextArea
                         name='description'
-                        onPressEnter={() => handleOk()}
                         onChange={(e) => handleChange(e)}
                         placeholder='Description'
                         autoSize={{ minRows: 3, maxRows: 10 }}

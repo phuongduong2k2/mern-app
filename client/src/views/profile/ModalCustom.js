@@ -177,7 +177,6 @@ class ModalCustom extends React.Component {
             <div>
               <Input.TextArea
                   name='description'
-                  onPressEnter={() => updatePost()}
                   onChange={(e) => handleChange(e)}
                   placeholder='Description'
                   autoSize={{ minRows: 3, maxRows: 10 }}

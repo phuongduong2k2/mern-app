@@ -1,7 +1,7 @@
 export const apiUrl = 
     process.env.NODE_ENV !== 'production'
         ? 'http://localhost:5000/api'
-        : 'http://localhost:5000/api'
+        : 'https://hidden-cliffs-24505.herokuapp.com/api'
 
 export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";

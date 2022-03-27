@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import moment from 'moment';
+import { useLocation } from 'react-router-dom';
 import { CommentOutlined, EllipsisOutlined, ExclamationCircleOutlined, LikeOutlined, SendOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Dropdown, Menu, Modal } from 'antd'
 import axios from 'axios';
@@ -35,7 +36,8 @@ const SinglePost = ({post : {title, description, createdAt, username, image}, id
     </Menu>
   )
 
-  const url = window.location.href.slice(22)
+  const location = useLocation()
+  const require = location.pathname
 
   const handleDelete = async () => {
     try {
@@ -73,7 +75,7 @@ const SinglePost = ({post : {title, description, createdAt, username, image}, id
           </div>
         </div>
         {
-          url === 'profile'
+          require === '/profile'
           && <Dropdown overlay={menu} trigger={['click']}>
               <Button
                 icon={<EllipsisOutlined />}

@@ -3,8 +3,8 @@ import { Upload, message, Modal, Button, Input } from 'antd';
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
 import authHeader from '../../services/auth-header';
 import axios from 'axios';
-import Notify from '../../untils/Notify/Notify'
-import { apiUrl } from '../../store/actions/constants';
+import Notify from '../components/Notify/Notify'
+import { apiUrl } from '../../store/constants';
 
 function getBase64(img, callback) {
   const reader = new FileReader();

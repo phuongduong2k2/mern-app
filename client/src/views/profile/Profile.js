@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux'
 import authHeader from '../../services/auth-header'
 import ModalCustom from './ModalCustom'
 import axios from 'axios'
-import SinglePost from '../../components/posts/SinglePost'
+import SinglePost from '../components/posts/SinglePost'
 import { UserOutlined } from '@ant-design/icons'
-import { apiUrl } from '../../store/actions/constants'
+import { apiUrl } from '../../store/constants'
 
 
 const Profile = () => {

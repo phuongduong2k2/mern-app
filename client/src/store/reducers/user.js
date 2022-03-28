@@ -1,7 +1,7 @@
 import {
     REMOVE_USER,
     SET_USER
-} from "../actions/constants";
+} from "../constants";
 
 const id = localStorage.getItem('id')
 
@@ -14,7 +14,7 @@ const initialStateUser = id
     } 
     : { data: null }
 
-export default function (state = initialStateUser, action) {
+export default function userReducers(state = initialStateUser, action) {
     const {type, payload} = action;
     switch(type) {
         case SET_USER:

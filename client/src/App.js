@@ -1,7 +1,7 @@
 import './App.css';
 import 'antd/dist/antd.min.css';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import Landing from './components/layout/Landing';
+import Landing from './views/components/layout/Landing';
 import NotFound from './views/NotFound';
 import { Auth } from './views/Auth';
 import Home from './views/Home';

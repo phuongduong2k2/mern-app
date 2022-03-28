@@ -1,9 +1,9 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import CreatePost from '../components/posts/CreatePost/CreatePost'
-import SinglePost from '../components/posts/SinglePost'
+import CreatePost from '../views/components/posts/CreatePost/CreatePost'
+import SinglePost from '../views/components/posts/SinglePost'
 import { Skeleton } from 'antd';
-import { apiUrl } from '../store/actions/constants';
+import { apiUrl } from '../store/constants';
 
 
 const Home = () => {

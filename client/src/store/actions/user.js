@@ -1,7 +1,7 @@
 import {
     SET_USER,
     REMOVE_USER
-} from "./constants";
+} from "../constants";
 
 import AuthService from "../../services/auth.service";
 

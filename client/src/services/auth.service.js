@@ -1,7 +1,7 @@
 import axios from "axios";
 import authHeader from "./auth-header";
 
-import { apiUrl } from "../store/actions/constants";
+import { apiUrl } from "../store/constants";
 
 const loadUser = async () => {
     const response = await axios.get(`${apiUrl}/auth`, { headers: authHeader() })
@@ -13,7 +13,7 @@ const loadUser = async () => {
 }
 
 const login = async (userForm) => {
-    const response = await axios.post(`${apiUrl}/auth` + '/login', userForm);
+    const response = await axios.post(`${apiUrl}/auth/login`, userForm);
     if (response.data.accessToken) {
         localStorage.setItem("accessToken", response.data.accessToken);
     }
@@ -21,7 +21,7 @@ const login = async (userForm) => {
 }
 
 const register = async (userForm) => {
-    const response = await axios.post(`${apiUrl}/auth` + '/register', userForm);
+    const response = await axios.post(`${apiUrl}/auth/register`, userForm);
     return response.data
 }
 

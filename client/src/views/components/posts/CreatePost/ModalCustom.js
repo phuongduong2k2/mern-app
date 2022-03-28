@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Modal, Button, Input } from 'antd'
 import axios from 'axios'
-import authHeader from '../../../services/auth-header'
-import Notify from '../../../untils/Notify/Notify'
-import { apiUrl } from '../../../store/actions/constants'
+import authHeader from '../../../../services/auth-header'
+import Notify from '../../../../untils/Notify/Notify'
+import { apiUrl } from '../../../../store/constants'
 
 const ModalCustom = ({visible, onClose, user}) => {
     const [post, setPost] = useState({

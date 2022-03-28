@@ -13,7 +13,7 @@ import {
 import { Button, Menu, Modal, Tooltip  } from 'antd';
 import { useNavigate, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../store/actions/auth';
+import { logout } from '../../../store/actions/auth';
 
 const Navbar = () => {
 

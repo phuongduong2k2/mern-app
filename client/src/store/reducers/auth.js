@@ -4,7 +4,7 @@ import {
     LOGIN_SUCCESS,
     LOGIN_FAIL,
     LOGOUT
-} from "../actions/constants";
+} from "../constants";
 
 const user = localStorage.getItem("accessToken");
 
@@ -12,7 +12,7 @@ const initialStateAuth = user
   ? { isLoggedIn: true, user }
   : { isLoggedIn: false, user: null };
 
-export default function (state = initialStateAuth, action) {
+export default function authReducers(state = initialStateAuth, action) {
     const {type, payload} = action;
     switch(type) {
         case LOGIN_SUCCESS:

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate, Outlet } from 'react-router-dom';
 import { loadUser } from '../store/actions/user';
-import Navbar from '../components/layout/Navbar'
+import Navbar from '../views/components/layout/Navbar'
 import { Layout } from 'antd';
 
 const ProtectedRoute = () => {

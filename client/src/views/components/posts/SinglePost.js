@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom';
 import { CommentOutlined, EllipsisOutlined, ExclamationCircleOutlined, LikeOutlined, SendOutlined, UserOutlined } from '@ant-design/icons'
 import { Button, Dropdown, Menu, Modal } from 'antd'
 import axios from 'axios';
-import authHeader from '../../services/auth-header';
-import Notify from '../../untils/Notify/Notify';
-import { apiUrl } from '../../store/actions/constants';
+import authHeader from '../../../services/auth-header';
+import Notify from '../Notify/Notify';
+import { apiUrl } from '../../../store/constants';
 
 const SinglePost = ({post : {title, description, createdAt, username, image}, id, handleDeletePost, index, handleOpenModal}) => {
 
@@ -66,7 +66,7 @@ const SinglePost = ({post : {title, description, createdAt, username, image}, id
         <div className='title'>
           {
             image
-              ? <img src={`${image}`} className="avatar" alt=''/>
+              ? <img src={`${image}`} className="avatar" alt='Img'/>
               : <UserOutlined className='avatar'/>
           }
           <div className='info'>

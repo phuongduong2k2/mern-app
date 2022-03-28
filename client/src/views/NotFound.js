@@ -11,7 +11,7 @@ const NotFound = () => {
         <h1 style={{color: "#444444", fontSize: "50px", margin: "0"}}>Not Found</h1>
         <Button
           type='primary'
-          onClick={() => navigate('login')}
+          onClick={() => navigate('/home')}
         >
           Return To Home
         </Button>

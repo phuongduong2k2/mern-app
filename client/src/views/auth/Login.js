@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Input, Button, Checkbox } from 'antd';
-import Notify from '../../untils/Notify/Notify';
+import Notify from '../components/Notify/Notify';
 import { useDispatch } from 'react-redux'
 import { login } from '../../store/actions/auth'
 
